@@ -10,7 +10,7 @@
 	<title>Nuevo proyecto</title>
 
 	<!-- Estilo de la página-->
-	<!-- <link rel="stylesheet" type="text/css" href="css/estilo.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
 	<?php
@@ -41,21 +41,63 @@
 		}
 	?>
 
-	<fieldset style="width:300px;">
-		<form method="post" action="">
-			Nombre Solicitante <input type="text" name="nombreSolicitante"><br>
-			Tipo Organizacion <input type="text" name="tipoOrganizacion"><br>
-			Dependencia <input type="text" name="dependencia"><br>
-			Teléfono <input type="text" name="telefono"><br>
-			Email <input type="text" name="email"><br>
-			Tipo Practica <input type="text" name="tipoPractica"><br>
-			Resultados <input type="text" name="resultados"><br>
-			Perfil <input type="text" name="perfil"><br>
-			Número de estudiantes <input type="text" name="nroEstudiantes"><br>
-			Descripción de trabajo <input type="text" name="descripcion"><br>
-			<br>
-			<input type="submit" name="submit">
-		</form>
-	</fieldset>
+	<div class = "contenido">
+		<div class="seccion">
+			<fieldset style="width:800px;">
+				<form method="post" action="">
+					<table>
+						<tbody>
+							<tr><td class="espacioTextoElementoForm">Nombre Solicitante</td><td><input type="text" name="nombreSolicitante"></td></tr>
+							<tr><td class="espacioTextoElementoForm">Tipo Organizacion</td>
+								<td><select name="tipoOrganizacion">
+										<option value=""></option> 
+					   					<option value="Interna">Interna (UTPL)</option> 
+					   					<option value="Externa">Externa</option> 
+					   					<option value="Vinculacion">Vinculación</option>
+									</select>
+								</td>
+							</tr>
+							<tr><td class="espacioTextoElementoForm">Dependencia</td><td><input type="text" name="dependencia"></td></tr>
+							<tr><td class="espacioTextoElementoForm">Teléfono</td><td><input type="text" name="telefono"></td></tr>
+							<tr><td class="espacioTextoElementoForm">Email</td><td><input type="text" name="email"></td></tr>
+							<tr><td class="espacioTextoElementoForm">Tipo Práctica</td>
+								<td><select name="tipoPractica">
+										<option value=""></option>
+										<option value="Prácticas técnicas nivel inicial">Prácticas técnicas nivel inicial</option>
+										<option value="Participación en proyectos UTPL">Participación en proyectos UTPL</option>
+										<option value="Prácticas pre profesionales en empresa">Prácticas pre profesionales en empresa</option>
+										<option value="Proyecto de vinculación">Proyecto de vinculación</option>
+									</select>
+								</td>
+							</tr>
+
+
+							<tr><td class="espacioTextoElementoForm">Resultados</td><td><input type="text" name="resultados"></td></tr>
+							
+							<tr><td class="espacioTextoElementoForm">Perfil requerido</td>
+								<td><select name="perfil">
+										<option value=""></option>
+										<option value="Operación, mantenimiento HW/SW/Redes">Operación, mantenimiento HW/SW/Redes</option>
+										<option value="Desarrollo de aplicaciones">Desarrollo de aplicaciones</option>
+										<option value="Investigación">Investigación</option>
+										<option value="Capacitación a terceros (solo vinculación)">Capacitación a terceros (solo vinculación)</option>
+									</select>
+								</td>
+							</tr>
+							<tr><td class="espacioTextoElementoForm">Número de estudiantes</td><td><input type="number" name="nroEstudiantes"></td></tr>
+							<tr><td class="espacioTextoElementoForm">Descripción de trabajo</td><td><textarea name="descripcion" rows="10" cols="30"placeholder="Descripción del proyecto"></textarea></td></tr>	
+							<tr><td></td></tr>
+							<tr><td></td><td id="botonEnviar"><input type="submit" name="submit"><input type="reset" text="Limpiar"></td></tr>	
+						</tbody>
+					</table>
+
+					
+
+					
+				</form>
+			</fieldset>	
+		</div>
+	</div>
+	
 </body>
 </html>
