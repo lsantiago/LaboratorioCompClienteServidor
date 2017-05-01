@@ -15,6 +15,8 @@
 <body>
 	<?php
 		include('conf/configuracionDB.php');
+
+		// PENDIENTE DE VALIDAR DEL LADO DEL SERVIDOR
 		if(isset($_POST['submit']))
 		{
 			$nombreSolicitante=mysql_real_escape_string($_POST['nombreSolicitante']);
@@ -44,6 +46,7 @@
 	<div class = "contenido">
 		<div class="seccion">
 			<fieldset style="width:800px;">
+				<!-- FORMULARIO PROYECTOS -->
 				<form method="post" action="">
 					<table>
 						<tbody>
@@ -90,11 +93,8 @@
 							<tr><td></td><td id="botonEnviar"><input type="submit" name="submit"><input type="reset" text="Limpiar"></td></tr>	
 						</tbody>
 					</table>
-
-					
-
-					
 				</form>
+				<!-- END FORMULARIO PROYECTOS -->
 			</fieldset>	
 		</div>
 	</div>
