@@ -30,16 +30,15 @@
 			$nroEstudiantes=mysql_real_escape_string($_POST['nroEstudiantes']);
 			$descripcion=mysql_real_escape_string($_POST['descripcion']);
 
-
+			$sql = "insert into proyectos values('','$nombreSolicitante','$tipoOrganizacion','$dependencia','$telefono','$email','$tipoPractica','$resultados','$perfil','$nroEstudiantes','$descripcion')";
 			
-			$query1=mysql_query("insert into proyectos values('','$nombreSolicitante','$tipoOrganizacion','$dependencia','$telefono','$email','$tipoPractica','$resultados','$perfil','$nroEstudiantes','$descripcion')");
-			echo "insert into proyectos values('','$nombreSolicitante','$tipoOrganizacion','$dependencia','$telefono','$email','$tipoPractica','$resultados','$perfil','$nroEstudiantes','$descripcion')";
-			
-
-			if($query1)
-			{
-				header("location:listar.php");
+			if (!$resultado = $mysqli->query($sql)) {
+    			echo "Error en la consulta.";
+				exit;
 			}
+
+			header("location:listar.php");
+			
 		}
 	?>
 

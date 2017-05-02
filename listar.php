@@ -7,7 +7,7 @@
 	<meta name = "author" content="Karla Romero, Santiago Quiñones">
 	<meta name = "description" contet="Lista de proyectos de gestión productiva">
 	
-	<title>Lista de proyectos</title>
+	<title>Lista de proyectos.</title>
 
 	<!-- Estilo de la página-->
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -18,15 +18,23 @@
 	<script type="text/javascript" src="js/buscar.js"></script>
 </head>
 <body>
-	<div class="contenido">
+	<div class="contenidoLista">
 		<div class="seccion">
 				<input type="text" id="buscador" placeholder="Escribe el texto a buscar..." /><br><br>
 
 				<?php
 				include('conf/configuracionDB.php');
-			 
 
-				$query1=mysql_query("select id, nombreSolicitante, tipoOrganizacion, dependencia, telefono, email, tipoPractica, resultados, perfil, nroEstudiantes, descripcionTrabajo from proyectos");
+				$sql = "select id, nombreSolicitante, tipoOrganizacion, dependencia, telefono, email, tipoPractica, resultados, perfil, nroEstudiantes, descripcionTrabajo from proyectos";
+
+				$resultado = $mysqli->query($sql);
+
+				if (!$resultado = $mysqli->query($sql)) {
+	    			echo "Error en la consulta.";
+					exit;
+				}
+
+
 				echo "<table id=\"tabla\" >
 				         <thead>
 					         <tr>
@@ -45,20 +53,20 @@
 						         <td></td>
 						     </tr>
 						 </thead><tbody>";
-				while($query2=mysql_fetch_array($query1))
+				while($resultadoArr = $resultado -> fetch_array())
 				{
-					echo "<tr><td>".$query2['nombreSolicitante']."</td>";
-					echo "<td>".$query2['tipoOrganizacion']."</td>";
-					echo "<td>".$query2['dependencia']."</td>";
-					echo "<td>".$query2['telefono']."</td>";
-					echo "<td>".$query2['email']."</td>";
-					echo "<td>".$query2['tipoPractica']."</td>";
-					echo "<td>".$query2['resultados']."</td>";
-					echo "<td>".$query2['perfil']."</td>";
-					echo "<td>".$query2['nroEstudiantes']."</td>";
-					echo "<td>".$query2['descripcionTrabajo']."</td>";
-					echo "<td><a href='editar.php?id=".$query2['id']."'>Editar</a></td>";
-					echo "<td><a href='eliminar.php?id=".$query2['id']."'>x</a></td><tr>";
+					echo "<tr><td>".$resultadoArr['nombreSolicitante']."</td>";
+					echo "<td>".$resultadoArr['tipoOrganizacion']."</td>";
+					echo "<td>".$resultadoArr['dependencia']."</td>";
+					echo "<td>".$resultadoArr['telefono']."</td>";
+					echo "<td>".$resultadoArr['email']."</td>";
+					echo "<td>".$resultadoArr['tipoPractica']."</td>";
+					echo "<td>".$resultadoArr['resultados']."</td>";
+					echo "<td>".$resultadoArr['perfil']."</td>";
+					echo "<td>".$resultadoArr['nroEstudiantes']."</td>";
+					echo "<td>".$resultadoArr['descripcionTrabajo']."</td>";
+					echo "<td><a href='editar.php?id=".$resultadoArr['id']."'>Editar</a></td>";
+					echo "<td><a href='eliminar.php?id=".$resultadoArr['id']."'>x</a></td><tr>";
 				}
 				echo "</tbody>"
 				?>

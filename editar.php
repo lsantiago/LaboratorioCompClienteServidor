@@ -31,15 +31,21 @@
 			$nroEstudiantes=$_POST['nroEstudiantes'];
 			$descripcionTrabajo=$_POST['descripcionTrabajo'];
 
+			$sql = "update proyectos set nombreSolicitante = '$nombreSolicitante', tipoOrganizacion = '$tipoOrganizacion', dependencia = '$dependencia', telefono = '$telefono', email = '$email', tipoPractica = '$tipoPractica', resultados = '$resultados', perfil = '$perfil', nroEstudiantes = '$nroEstudiantes', descripcionTrabajo = '$descripcionTrabajo' where id='$id'";
 
-			$query3=mysql_query("update proyectos set nombreSolicitante = '$nombreSolicitante', tipoOrganizacion = '$tipoOrganizacion', dependencia = '$dependencia', telefono = '$telefono', email = '$email', tipoPractica = '$tipoPractica', resultados = '$resultados', perfil = '$perfil', nroEstudiantes = '$nroEstudiantes', descripcionTrabajo = '$descripcionTrabajo' where id='$id'");
-			if($query3)
-			{
-				header('location:listar.php');
+			if (!$resultado = $mysqli->query($sql)) {
+    			echo "Error en la consulta.";
+				exit;
 			}
+
+			header('location:listar.php');
+			
 		}
-		$query1=mysql_query("select * from proyectos where id='$id'");
-		$query2=mysql_fetch_array($query1);
+
+		// Consulta para despligue de datos en el formulario
+		$sql = "select * from proyectos where id='$id'";
+		$query1 = $mysqli->query($sql);
+		$query2= $query1 -> fetch_array();
 	?>
 
 	<div class = "contenido">
