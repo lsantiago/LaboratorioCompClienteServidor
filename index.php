@@ -28,7 +28,7 @@
 			Obtiene la dirección
 			**/
 			function obtenerDireccion(){
-				$direccion = 'Titulación de Sistemas Informáticos y computación';
+				$direccion = 'Titulación de Sistemas Informáticos y Computación';
 				return $direccion;
 			}
 
@@ -60,11 +60,11 @@
 			**/
 			function obtenerPuntosConsiderar(){
 				$about = '<p>El siguiente formulario recoge los datos necesarios para asignar estudiantes de Practicum 3.2 correspondiente a octavo ciclo de la Titulación. 
-Las actividades a asignar deben estar  viculadas a proyectos de investigación de Docentes Investigadores que son parte de las secciones de los Departamentos del área tencológica. Tener presente que el trabajo de los alumnos debe ser el de un Asistente dentro de los proyectos que apoyan en el desarrollo y trabajo a los docentes responsables.
+Las actividades a asignar deben estar  vinculadas a proyectos de investigación de Docentes Investigadores que son parte de las secciones de los Departamentos del área tencológica. Tener presente que el trabajo de los alumnos debe ser el de un Asistente dentro de los proyectos que apoyan en el desarrollo y trabajo a los docentes responsables.
 
 				    </p>
 
-				    <p>Para las solicitudes de estudiantes se solicita tomar en cuenta las actividades y competencias relacionadas a este nivel de Practicum.</p>';
+				    <p>Para las solicitudes de estudiantes se solicita tomar en cuenta las actividades y competencias relacionadas a este nivel de Practicum 3.2.</p>';
 
 				return $about;
 			}
@@ -94,7 +94,7 @@ Las actividades a asignar deben estar  viculadas a proyectos de investigación d
 			
 			<!-- PUNTOS A CONSIDERAR -->
 			<div class="seccion">
-				<h2>PUNTOS A CONCIDERAR</h2>
+				<h2>PUNTOS A CONSIDERAR</h2>
 				<?php echo obtenerPuntosConsiderar(); ?>
 			</div>
 			<!-- END PUNTOS A CONSIDERAR -->
@@ -156,17 +156,27 @@ Las actividades a asignar deben estar  viculadas a proyectos de investigación d
 
             <!-- CONSULTA PROYECTOS -->
 			<div class="seccion">
-				<h2>CONSULTE AQUÍ QUÉ PROYECTOS HAN SOLICITADO BECARIOS PREACTICUM 3.2 </h2>
+				<h2>CONSULTE AQUÍ QUÉ PROYECTOS HAN SOLICITADO BECARIOS PRACTICUM 3.2 </h2>
 				<form name = "consultar" action="listar.php"  method="POST">
                 <input type="submit" value="Consultar">
                 </form>
 			</div>
 			<!-- END CONSULTA PROYECTOS -->
 
+				<footer> 
+					<div class="menu2">
+						 <ul>
+							<li><a href="./index.php">Inicio</a></li>
+							<li><a href="#">Lineamientos</a></li>
+							<li><a href="http://utpl.edu.ec">UNIVERSIDAD TÉCNICA PARTICULAR DE LOJA</a></li>
+						</ul>
+					 </div>
+		   
+					<p>Todos los derechos reservados 2017, Registro de Proyectos GP 3.2. Diseñado por: Karla Romero, Santiago Quiñones</p>
+				</footer>
+			
 		</div>
 
-		<footer>
-			Todos los derechos reservados 2017, Registro de Proyectos GP 3.2. Diseñado por: Karla Romero, Santiago Quiñones
-		</footer>
+	
 	</body>
 	</html>

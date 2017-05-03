@@ -150,8 +150,36 @@ input[type=submit], input[type=reset]{
 body > footer{
 	background: #666;
 }
+footer {
+   
+    clear: both;
+    padding: 0px;
+	margin-left:100px;
+    text-align: left;
+    display: inline;
+	   margin-top: 0px;
+	
+}
 
+footer p{
+	color:#fff;
+	font-size:12px;
+	text-align:center;
+	}
+.menu2 ul
+{
+       padding: 0px;
+    margin-bottom: 30px;
+   margin-top: 5px;
+   text-align:center;
+}
 
+.menu2 li
+{
+   list-style-type: none;
+   display: inline;
+   padding-right: 5px;
+}
 
 
 
