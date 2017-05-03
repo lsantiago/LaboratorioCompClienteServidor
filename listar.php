@@ -71,8 +71,8 @@
 
 			<p>Para las solicitudes de estudiantes se solicita tomar en cuenta las actividades y competencias relacionadas a este nivel de Practicum.</p>';
 
-			return $about;
-		}
+				return $about;
+			}
 
 
 		?>
@@ -150,7 +150,7 @@
 					}
 					echo "</tbody>"
 					?>
-				</ol>
+				
 			</table>
 			
 			<footer> 
