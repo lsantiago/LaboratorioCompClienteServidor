@@ -13,7 +13,7 @@
 			$resultados=mysql_real_escape_string($_POST['resultados']);
 			$perfil=mysql_real_escape_string($_POST['perfil']);
 			$nroEstudiantes=mysql_real_escape_string($_POST['nroEstudiantes']);
-			$descripcion=mysql_real_escape_string($_POST['descripcion']);
+			$descripcion=$_POST['descripcion'];
 
 			$sql = "insert into proyectos values('','$nombreSolicitante','$tipoOrganizacion','$dependencia','$telefono','$email','$tipoPractica','$resultados','$perfil','$nroEstudiantes','$descripcion')";
 			
