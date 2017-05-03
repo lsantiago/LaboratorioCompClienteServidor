@@ -7,6 +7,10 @@ html {
   background-size: cover;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .contenido{
 	background-color: rgba(0, 0, 0, 0.7);
@@ -29,7 +33,7 @@ html {
 	font-size: 16px;
 	margin: auto;
 	padding: 60px;
-	width: 1500px;	
+	width: 1100px;	
 }
 
 .espacioTextoElementoForm{
@@ -42,7 +46,51 @@ html {
 }
 
 #tabla{
+	border: 0px;
 	color: white;
+	height: auto;
+	overflow: hidden;
+	padding:0px 15px;
+	/*width: 1000px;*/
+
+	border-collapse: collapse;
+    width: 100%;
+}
+
+#tabla th, #tabla td{
+    vertical-align: top;
+    padding: 0px 5px;
+    text-align: left;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+#tabla thead {
+   font-weight: bold;
+ color:#fff;
+ background-color: #444;
+ border-bottom:1px #000 solid;
+}
+
+.celda{
+	height: auto;
+	width: 130px;
+}
+
+.destacado{ 
+	font-weight: bold;
+}
+
+
+.celda2{
+	float: left;
+	height: auto;
+	text-align:justify;
+	width: 130px;
+}
+	
+.limpiar{
+	clear: both;
 }
 
 .informacion{
@@ -73,4 +121,37 @@ h2{
 a[href]{
 	color: orange;
 }
+
+
+/* Tamaño de controles de formulario */
+input, textarea, select{
+  width : 300px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 5px;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+
+/* Tamaño de los botones*/
+input[type=submit], input[type=reset]{
+	width : 100px;
+}
+
+#buscador{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+body > footer{
+	background: #666;
+}
+
+
+
+
 

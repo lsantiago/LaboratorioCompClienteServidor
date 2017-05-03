@@ -114,5 +114,9 @@
 	<?php
 		}
 	?>
+
+	<footer>
+			Todos los derechos reservados 2017, Registro de Proyectos GP 3.2. Diseñado por: Karla Romero, Santiago Quiñones
+	</footer>
 </body>
 </html>
