@@ -117,14 +117,22 @@
 				<!-- FORMULARIO DE ACTUALIZACIÓN -->
 			
 		</div>
+		<footer> 
+					<div class="menu2">
+						 <ul>
+							<li><a href="./index.php">Inicio</a></li>
+							<li><a href="#">Lineamientos</a></li>
+							<li><a href="http://utpl.edu.ec">UNIVERSIDAD TÉCNICA PARTICULAR DE LOJA</a></li>
+						</ul>
+					 </div>
+		   
+					<p>Todos los derechos reservados 2017, Registro de Proyectos GP 3.2. Diseñado por: Karla Romero, Santiago Quiñones</p>
+				</footer>
 	</div>
 	
 	<?php
 	}
 	?>
 
-	<footer>
-			Todos los derechos reservados 2017, Registro de Proyectos GP 3.2. Diseñado por: Karla Romero, Santiago Quiñones
-	</footer>
-</body>
+	</body>
 </html>
