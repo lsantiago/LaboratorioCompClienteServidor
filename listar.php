@@ -104,7 +104,7 @@
 					<input type="text" id="buscador" placeholder="Escribe datos a buscar..." /><br><br>
 
 					<?php
-					include('conf/configuracionDB.php');
+					require_once 'conf/StartConexion.php';
 
 					$sql = "select id, nombreSolicitante, tipoOrganizacion, dependencia, telefono, email, tipoPractica, resultados, perfil, nroEstudiantes, descripcionTrabajo from proyectos";
 

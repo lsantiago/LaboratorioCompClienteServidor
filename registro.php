@@ -1,5 +1,5 @@
 <?php
-		include('conf/configuracionDB.php');
+		include('conf/StartConexion.php');
 
 		
 		if(isset($_POST['submit']))

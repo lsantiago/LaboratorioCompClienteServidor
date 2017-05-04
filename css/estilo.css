@@ -47,13 +47,11 @@ html {
 
 #tabla{
 	border: 0px;
+	border-collapse: collapse;
 	color: white;
 	height: auto;
 	overflow: hidden;
 	padding:0px 15px;
-	/*width: 1000px;*/
-
-	border-collapse: collapse;
     width: 100%;
 }
 
@@ -66,10 +64,10 @@ html {
 }
 
 #tabla thead {
-   font-weight: bold;
- color:#fff;
- background-color: #444;
- border-bottom:1px #000 solid;
+	background-color: #444;
+	border-bottom:1px #000 solid;
+	color:#fff;
+	font-weight: bold;
 }
 
 .celda{
@@ -77,26 +75,10 @@ html {
 	width: 130px;
 }
 
+/* Pata texto resaltado*/
 .destacado{ 
 	font-weight: bold;
 }
-
-
-.celda2{
-	float: left;
-	height: auto;
-	text-align:justify;
-	width: 130px;
-}
-	
-.limpiar{
-	clear: both;
-}
-
-.informacion{
-	float: left;
-}
-
 
 .seccion{
 	margin-bottom: 70px;

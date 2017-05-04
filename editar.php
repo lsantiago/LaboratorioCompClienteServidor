@@ -14,10 +14,14 @@
 </head>
 <body>
 	<?php
-	include('conf/configuracionDB.php');
+	require_once 'conf/StartConexion.php';
+
+	// valida que el id este definido y no sea null
 	if(isset($_GET['id']))
 	{
 		$id=$_GET['id'];
+
+		// valida si el formulairo fue enviado
 		if(isset($_POST['submit']))
 		{
 			$nombreSolicitante=$_POST['nombreSolicitante'];
@@ -29,15 +33,17 @@
 			$resultados=$_POST['resultados'];
 			$perfil=$_POST['perfil'];
 			$nroEstudiantes=$_POST['nroEstudiantes'];
-			$descripcionTrabajo=$_POST['descripcionTrabajo'];
+			$descripcionTrabajo=$_POST['descripcion'];
 
 			$sql = "update proyectos set nombreSolicitante = '$nombreSolicitante', tipoOrganizacion = '$tipoOrganizacion', dependencia = '$dependencia', telefono = '$telefono', email = '$email', tipoPractica = '$tipoPractica', resultados = '$resultados', perfil = '$perfil', nroEstudiantes = '$nroEstudiantes', descripcionTrabajo = '$descripcionTrabajo' where id='$id'";
 
+			// si existe un error en la ejecución de la consulta lanza un error
 			if (!$resultado = $mysqli->query($sql)) {
     			echo "Error en la consulta.";
 				exit;
 			}
 
+			// redireccion a la pagina listar.php
 			header('location:listar.php');
 			
 		}
@@ -50,7 +56,8 @@
 
 	<div class = "contenido">
 		<div class="seccion">
-			<fieldset style="width:800px;">
+			
+				<!-- FORMULARIO DE ACTUALIZACIÓN -->
 				<form method="post" action="">
 					<table>
 						<tbody>
@@ -101,18 +108,19 @@
 								</td>
 							</tr>
 							<tr><td class="espacioTextoElementoForm">Número de estudiantes</td><td><input type="number" name="nroEstudiantes" value="<?php echo $query2['nroEstudiantes']; ?>"></td></tr>
-							<tr><td class="espacioTextoElementoForm">Descripción de trabajo</td><td><textarea name="descripcion" rows="10" cols="30"placeholder="Descripción del proyecto" value="<?php echo $query2['descripcionTrabajo']; ?>"></textarea></td></tr>	
+							<tr><td class="espacioTextoElementoForm">Descripción de trabajo</td><td><textarea name="descripcion" rows="10" cols="30"placeholder="Descripción del proyecto"><?php echo $query2['descripcionTrabajo']; ?></textarea></td></tr>	
 							<tr><td></td></tr>
 							<tr><td></td><td id="botonEnviar"><input type="submit" name="submit" value="update" /></td></tr>	
 						</tbody>
 					</table>
 				</form>
-			</fieldset>	
+				<!-- FORMULARIO DE ACTUALIZACIÓN -->
+			
 		</div>
 	</div>
 	
 	<?php
-		}
+	}
 	?>
 
 	<footer>
